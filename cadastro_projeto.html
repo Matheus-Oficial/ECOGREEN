@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/cadastro_projeto.css">
+  <link rel="shortcut icon" href="/imagens/Logo.svg" type="image/x-icon">
+  <title>ECOGREEN/CAD-PROJECT</title>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/imagens/Logo.svg" alt="Logo da empresa">
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar projetos">
+    </div>
+  </header>
+
+  <main>
+    <h2>Cadastro de Projeto</h2>
+    <form>
+      <div class="form-group">
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
+      </div>
+
+      <div class="form-group">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" placeholder="Código" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sigla">Sigla:</label>
+        <input type="text" id="sigla" name="sigla" placeholder="Sigla" required>
+      </div>
+
+      <div class="form-group">
+        <label for="projetoPai">Projeto Pai:</label>
+        <input type="text" id="projetoPai" name="projetoPai" placeholder="projeto Pai">
+      </div>
+
+      <div class="form-group">
+        <label for="nomeProjeto">Nome do Projeto:</label>
+        <input type="text" id="nomeProjeto" name="nomeProjeto" placeholder="Nome do Projeto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dataInicio">Data de Início:</label>
+        <input type="date" id="dataInicio" name="dataInicio" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dataFim">Data de Fim:</label>
+        <input type="date" id="dataFim" name="dataFim">
+      </div>
+
+      
+
+      <div class="buttons">
+        <button type="button" class="back-button">Voltar</button>
+        <button type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </main>
+
+  <aside class="project-list">
+    <h2>Projetos Cadastrados</h2>
+    <ul>
+      <li>Projeto 1</li>
+      <li>Projeto 2</li>
+      <li>Projeto 3</li>
+      <!-- Adicione mais itens conforme necessário -->
+    </ul>
+  </aside>
+</body>
+</html>

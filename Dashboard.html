@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Dashboard.css">
+    <link rel="shortcut icon" href="/imagens/Logo.svg" type="image/x-icon">
+    <title>ECOGREEN/DASHBOARD</title>
+    
+</head>
+<body>
+
+    <aside>
+        <button class="logout-btn">Sair</button>
+        <nav>
+            <a href="#">Cadastrar Projeto</a>
+            <a href="#">Suporte</a>
+            <a href="#">Feedback</a>
+        </nav>
+    </aside>
+
+    <aside class="right">
+        <!-- Gráfico de Pizza -->
+        <canvas id="pieChart" width="400" height="300"></canvas>
+        
+        <!-- Gráfico de Donut -->
+        <canvas id="doughnutChart" width="400" height="300"></canvas>
+        
+        <!-- Gráfico de Colunas Empilhadas -->
+        <canvas id="stackedColumnChart" width="400" height="300"></canvas>
+        
+        <!-- Histograma -->
+        <canvas id="histogramChart" width="400" height="300"></canvas>
+    </aside>
+
+    <header>
+        <div>
+            <img class="logo" c src="/imagens/Logo.svg" alt="Logo" height="50">
+        </div>
+        
+        <input class="barrra" type="text" placeholder="Pesquisar">
+    </header>
+
+    
+
+    <main>
+        <!-- Gráfico de Linha -->
+        <canvas id="lineChart" width="400" height="300"></canvas>
+        
+        <!-- Gráfico de Linhas Múltiplas -->
+        <canvas id="multilineChart" width="400" height="300"></canvas>
+        
+        <!-- Gráfico de Dispersão Conectado -->
+        <canvas id="scatterChart" width="400" height="300"></canvas>
+    </main>
+
+    
+
+    <!-- Inclua a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Gráfico de Linha
+        var lineChart = new Chart(document.getElementById('lineChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+                datasets: [{
+                    label: 'Dados de Exemplo',
+                    data: [10, 20, 15, 25, 30],
+                    borderColor: '#3498db',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            }
+        });
+
+        // Gráfico de Linhas Múltiplas
+        var multilineChart = new Chart(document.getElementById('multilineChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+                datasets: [
+                    {
+                        label: 'Dados A',
+                        data: [15, 25, 20, 30, 35],
+                        borderColor: '#e74c3c',
+                        borderWidth: 2,
+                        fill: false
+                    },
+                    {
+                        label: 'Dados B',
+                        data: [5, 15, 10, 20, 25],
+                        borderColor: '#2ecc71',
+                        borderWidth: 2,
+                        fill: false
+                    }
+                ]
+            }
+        });
+
+        // // Gráfico de Dispersão Conectado
+        // var scatterChart = new Chart(document.getElementById('scatterChart').getContext('2d'), {
+        //     type: 'line',
+        //     data: {
+        //         datasets: [{
+        //             label: 'Dados de Dispersão Conectado',
+        //             data: [
+        //                 { x: 10, y: 20 },
+        //                 { x: 15, y: 25 },
+        //                 { x: 20, y: 30 },
+        //                 { x: 25, y: 35 },
+        //                 { x: 30, y: 40 },
+        //             ],
+        //             borderColor: '#9b59b6',
+        //             borderWidth: 2,
+        //             fill: false,
+        //             showLine: true
+        //         }]
+        //     }
+        // });
+
+        // Gráfico de Pizza
+        var pieChart = new Chart(document.getElementById('pieChart').getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels: ['Categoria A', 'Categoria B', 'Categoria C'],
+                datasets: [{
+                    data: [30, 40, 30],
+                    backgroundColor: ['#3498db', '#e74c3c', '#2ecc71']
+                }]
+            }
+        });
+
+        // Gráfico de Donut
+        var doughnutChart = new Chart(document.getElementById('doughnutChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Categoria X', 'Categoria Y', 'Categoria Z'],
+                datasets: [{
+                    data: [25, 35, 40],
+                    backgroundColor: ['#9b59b6', '#3498db', '#e74c3c']
+                }]
+            }
+        });
+
+        // Gráfico de Colunas Empilhadas
+        var stackedColumnChart = new Chart(document.getElementById('stackedColumnChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+                datasets: [
+                    {
+                        label: 'Categoria A',
+                        data: [10, 20, 15, 25, 30],
+                        backgroundColor: '#3498db',
+                        borderWidth: 0
+                    },
+                    {
+                        label: 'Categoria B',
+                        data: [5, 15, 10, 20, 25],
+                        backgroundColor: '#e74c3c',
+                        borderWidth: 0
+                    }
+                ]
+            }
+        });
+
+        // Histograma
+        var histogramChart = new Chart(document.getElementById('histogramChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['0-10', '11-20', '21-30', '31-40', '41-50'],
+                datasets: [{
+                    label: 'Frequência',
+                    data: [10, 15, 20, 25, 30],
+                    backgroundColor: '#2ecc71',
+                    borderWidth: 0
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

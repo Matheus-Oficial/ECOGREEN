@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/feedback.css">
+  <link rel="shortcut icon" href="/imagens/Logo.svg" type="image/x-icon">
+  <title>ECOGREEN/FEEDBACK</title>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/imagens/Logo.svg" alt="Logo da empresa">
+    </div>
+  </header>
+
+  <main>
+    <h2>Deixe Seu Feedback</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label>Avaliação:</label>
+        <div class="rating">
+          <input type="radio" id="excelente" name="rating" value="excelente">
+          <label for="excelente">Excelente</label>
+
+          <input type="radio" id="muitoBom" name="rating" value="muitoBom">
+          <label for="muitoBom">Muito Bom</label>
+
+          <input type="radio" id="bom" name="rating" value="bom">
+          <label for="bom">Bom</label>
+
+          <input type="radio" id="pessimo" name="rating" value="pessimo">
+          <label for="pessimo">Péssimo</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comentários:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Deixe aqui o seu comentário..."></textarea>
+      </div>
+
+      <button type="submit">Enviar Feedback</button>
+    </form>
+  </main>
+
+  <aside class="reviews">
+    <h2>Avaliações Recentes</h2>
+    <ul>
+      <li><strong>João</strong>: Excelente! Ótimo atendimento.</li>
+      <li><strong>Maria</strong>: Muito Bom. Poderia melhorar na velocidade de resposta.</li>
+      <li><strong>Carlos</strong>: Bom. Serviço satisfatório.</li>
+      <li><strong>Ana</strong>: Péssimo. Experiência terrível.</li>
+      <!-- Adicione mais avaliações conforme necessário -->
+    </ul>
+  </aside>
+</body>
+</html>
