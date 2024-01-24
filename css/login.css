@@ -39,6 +39,7 @@ body {
   }
   
   button {
+    width: 100%;
     padding: 10px;
     background-color: #005F40;
     color: bisque;

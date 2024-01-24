@@ -103,3 +103,17 @@ body {
     margin-bottom: 10px;
   }
   
+  a{
+    background-color: #12a6c4;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  } 
+  
+  .avaliações{
+    display: flex;
+    justify-content: center;
+  }
